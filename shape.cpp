@@ -49,6 +49,28 @@ Shape& Shape::operator=(const Shape& rhs) {
 const Point& Shape::getOrigin(){
   return origin;
 }
+
 char* Shape::getName() const{
   return shapeName;
+}
+
+void Shape::display() const{
+  cout << "\nShape Name: " <<  getName() << "\n";
+  cout << "\nX-coordinate: " <<  getOrigin().get_xcord() << "\n";
+  cout << "\nShape Name: " <<  getOrigin().get_ycord() << "\n";
+}
+
+double Shape::distance(Shape& other){
+  double dist = getOrigin().distance(other.getOrigin);
+  return dist;
+}
+
+static double Shape::distance (Shape& the_shape, Shape& other){
+  double dist = Point::distance(the_shape.getOrigin(), other.getOrigin());
+  return dist;
+}
+
+void Shape::move(double dx, double dy){
+  getOrigin().set_xcord((getOrigin().get_xcord())+dx);
+  getOrigin().set_ycord((getOrigin().get_ycord())+dy);
 }
