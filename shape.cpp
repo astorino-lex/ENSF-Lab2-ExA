@@ -1,14 +1,15 @@
 #include "shape.h"
 #include "point.h"
+#include <stdio.h>
 #include <string.h>
 #include <iostream>
 using namespace std;
 
-Shape::Shape(Point& p, string s){
+Shape::Shape(Point& p, char* c){
   origin.set_xcord() = p.get_xcord();
   origin.set_ycord() = p.get_ycord();
   shapeName = new char[s.length() + 1];
-  strcpy(shapeName, s);
+  strcpy(shapeName, c);
 }
 
 
@@ -46,18 +47,18 @@ Shape& Shape::operator=(const Shape& rhs) {
   return *this;
 }
 
-const Point& Shape::getOrigin(){
+Point& Shape::getOrigin(){
   return origin;
 }
 
-char* Shape::getName() const{
+char* Shape::getName(){
   return shapeName;
 }
 
-void Shape::display() const{
+void Shape::display(){
   cout << "\nShape Name: " <<  getName() << "\n";
   cout << "\nX-coordinate: " <<  getOrigin().get_xcord() << "\n";
-  cout << "\nShape Name: " <<  getOrigin().get_ycord() << "\n";
+  cout << "\nY-coordinate: " <<  getOrigin().get_ycord() << "\n";
 }
 
 double Shape::distance(Shape& other){

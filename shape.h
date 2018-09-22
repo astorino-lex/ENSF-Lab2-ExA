@@ -8,12 +8,12 @@ using namespace std;
 
 class Shape {
 
-private:
+protected:
   Point origin;
   char * shapeName;
 
 public:
-  Shape(Point& p, string s);
+  Shape(Point& p, char* c);
   //PROMISES: a constructor which initializes all the data members.
 
   Shape(const Shape& source); // copy constructor
@@ -24,13 +24,13 @@ public:
   // REQUIRES: rhs is reference to a Shape as a source
   // PROMISES: to make this-object a copy of rhs.
 
-  const Point& getOrigin();
+  Point& getOrigin();
   //  PROMISES: to return the Point object with the point of origin of the shape.
 
-  char* getName() const;
+  char* getName();
   // PROMISES: to return the char pointer to the name of the shape.
 
-  void display() const;
+  void display();
   //PROMISES: to print the shape information on the screen.
 
   double distance(Shape& other);
@@ -42,7 +42,7 @@ public:
   void move(double dx, double dy);
   //PROMISE: to move the origin point of the shapeName
 
-  
+
 
 };
 #endif
