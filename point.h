@@ -33,11 +33,11 @@ class Point {
 
     static double distance(Point a, Point b);
     //REQUIRES: two objects of class Point
-    //PROMISES: returns the distance between the two points
+    //PROMISES: returns the distance between Point a and Point b
 
     double distance(Point a);
     //REQUIRES: an onject of class Point
-    //PROMISES:
+    //PROMISES: returns the distance between Point and Point a
 
 
   private:
