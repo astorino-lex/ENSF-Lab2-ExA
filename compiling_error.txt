@@ -1,20 +1,11 @@
-/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:8:8: error: constructor for 'Shape' must explicitly initialize the member 'origin' which does not have a default constructor
-Shape::Shape(Point p, char* c){
-       ^
-/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.h:12:9: note: member is declared here
-  Point origin;
-        ^
-/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/point.h:8:7: note: 'Point' declared here
-class Point {
-      ^
-/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:9:26: error: member reference base type 'int' is not a structure or union
-  origin = Point(p.getx(). p.gety());
-                 ~~~~~~~~^ ~
-/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:64:44: error: reference to non-static member function must be called; did you mean to call it with no arguments?
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:8:51: error: member reference base type 'int' is not a structure or union
+Shape::Shape(Point& p, char* c) : origin (p.getx(). p.gety()) {
+                                          ~~~~~~~~^ ~
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:65:44: error: reference to non-static member function must be called; did you mean to call it with no arguments?
   double dist = getOrigin().distance(other.getOrigin);
                                      ~~~~~~^~~~~~~~~
                                                     ()
-3 errors generated.
+2 errors generated.
 /Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/square.cpp:7:9: error: out-of-line definition of 'Square' does not match any declaration in 'Square'
 Square::Square(int xcord, int ycord, double length, char* name){
         ^~~~~~
