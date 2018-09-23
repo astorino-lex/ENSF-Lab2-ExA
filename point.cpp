@@ -12,7 +12,7 @@ Point::Point (const Point &source){
 Point::Point(int x, int y) {
   xcord = x;
   ycord = y;
-  ++id;
+  id = ++count;
 }
 
 int Point::getx() {
@@ -43,7 +43,7 @@ Point& Point::operator =(const Point& p) {
 }
 
 int Point::counter() {
-  return Point::id-1000;
+  return Point::count-1000;
 }
 
 void Point::display() {

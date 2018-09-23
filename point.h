@@ -8,6 +8,8 @@ using namespace std;
 class Point {
 
   public:
+    static int count; //total number of points
+    
     Point (const Point &source);
     //copy constructor
 
@@ -52,9 +54,9 @@ class Point {
   private:
     int xcord; //x coordinate on a cartersian plane
     int ycord; //y coordinate on a cartesian plane
-    static int id; //id number for each object
+    int id; //id number for each object
 };
 
-int Point::id = 1000;
+int Point::count = 1000;
 
 #endif
