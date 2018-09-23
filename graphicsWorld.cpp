@@ -1,11 +1,11 @@
-#include "graphicsWorld.h"
+#include "GraphicsWorld.h"
 #include <string.h>
 #include <iostream>
 #include "point.h"
 using namespace std;
 
 
-void graphicsWorld::run(){
+void GraphicsWorld::run(){
 #if 1               // Change 0 to 1 to test Point
   Point m (6, 8);
   Point n (6,8);

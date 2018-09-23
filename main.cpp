@@ -1,14 +1,14 @@
 
 #include <assert.h>
 #include <iostream>
-#include "graphicsWorld.h"
+#include "GraphicsWorld.h"
 
 using namespace std;
 
 
 int main()
 {
-  graphicsWorld g;
+  GraphicsWorld g;
   g.run();
   return 0;
 }

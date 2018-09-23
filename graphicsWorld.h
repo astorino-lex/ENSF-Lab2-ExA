@@ -5,7 +5,7 @@ using namespace std;
 #ifndef GRAPHICSWORLD_H
 #define GRAPHICSWORLD_H
 
-class graphicsWorld {
+class GraphicsWorld {
   public:
     void run();
   private:

@@ -5,9 +5,10 @@
 #include <iostream>
 using namespace std;
 
-Shape::Shape(Point& p, char* c) : origin (p.getx(). p.gety()) {
+Shape::Shape(int x, int y, char* c) {
   // origin still wrong, made overloaded = int point but unsused rn
 //  origin = new Point(p.getx(). p.gety());
+  origin (x, y);
   shapeName = new char[strlen(c) + 1];
   strcpy(shapeName, c);
 }
@@ -62,7 +63,7 @@ void Shape::display(){
 }
 
 double Shape::distance(Shape& other){
-  double dist = getOrigin().distance(other.getOrigin);
+  double dist = getOrigin().distance(origin);
   return dist;
 }
 

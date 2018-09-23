@@ -13,6 +13,10 @@ protected:
   double side_a;
 
 public:
+
+Square(int xcord, int ycord, double length, char* name);
+//constructor
+
 void display();
 //PROMISES: to print the information about the square
 

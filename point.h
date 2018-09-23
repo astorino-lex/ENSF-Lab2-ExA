@@ -6,7 +6,11 @@ using namespace std;
 #define POINT_H
 
 class Point {
+
   public:
+    Point (const Point &source);
+    //copy constructor
+
     Point(int x, int y);
     //PROMISES: creates a point located at the coordinates (x,y) with a
     //          default id number
@@ -14,7 +18,7 @@ class Point {
     int getx();
     //PROMISES: returns the point's x-coordinate
 
-    int gety();
+     int gety();
     //PROMISES: returns the point's y-coordinate
 
     void setx(int x);
