@@ -1,7 +1,7 @@
 
 #include <assert.h>
 #include <iostream>
-#include "GraphicsWorld.h"
+#include "graphicsWorld.h"
 
 using namespace std;
 

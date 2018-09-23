@@ -1,4 +1,4 @@
-#include "GraphicsWorld.h"
+#include "graphicsWorld.h"
 #include <string.h>
 #include <iostream>
 #include "point.h"
