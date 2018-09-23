@@ -1,3 +1,38 @@
-/cygdrive/c/Users/shrey/AppData/Local/Temp/ccOiBXNB.o:main.cpp:(.text+0x15): undefined reference to `graphicsWorld::run()'
-/cygdrive/c/Users/shrey/AppData/Local/Temp/ccOiBXNB.o:main.cpp:(.text+0x15): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `graphicsWorld::run()'
-collect2: error: ld returned 1 exit status
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:8:8: error: constructor for 'Shape' must explicitly initialize the member 'origin' which does not have a default constructor
+Shape::Shape(Point p, char* c){
+       ^
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.h:12:9: note: member is declared here
+  Point origin;
+        ^
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/point.h:8:7: note: 'Point' declared here
+class Point {
+      ^
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:9:26: error: member reference base type 'int' is not a structure or union
+  origin = Point(p.getx(). p.gety());
+                 ~~~~~~~~^ ~
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.cpp:64:44: error: reference to non-static member function must be called; did you mean to call it with no arguments?
+  double dist = getOrigin().distance(other.getOrigin);
+                                     ~~~~~~^~~~~~~~~
+                                                    ()
+3 errors generated.
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/square.cpp:7:9: error: out-of-line definition of 'Square' does not match any declaration in 'Square'
+Square::Square(int xcord, int ycord, double length, char* name){
+        ^~~~~~
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/square.cpp:7:9: error: constructor for 'Square' must explicitly initialize the base class 'Shape' which does not have a default constructor
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/shape.h:9:7: note: 'Shape' declared here
+class Shape {
+      ^
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/square.cpp:8:18: error: expected ';' after expression
+  Shape::Square()
+                 ^
+                 ;
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/square.cpp:8:10: error: no member named 'Square' in 'Shape'
+  Shape::Square()
+  ~~~~~~~^
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/square.cpp:14:53: error: no member named 'get_xcord' in 'Point'
+  cout << "\nX-coordinate: " <<  Shape::getOrigin().get_xcord() << "\n";
+                                 ~~~~~~~~~~~~~~~~~~ ^
+/Users/alexaastorino/Desktop/School/ENSF 480/Lab2/exA/square.cpp:15:53: error: no member named 'get_ycord' in 'Point'
+  cout << "\nY-coordinate: " <<  Shape::getOrigin().get_ycord() << "\n";
+                                 ~~~~~~~~~~~~~~~~~~ ^
+6 errors generated.

@@ -5,10 +5,10 @@
 #include <iostream>
 using namespace std;
 
-Shape::Shape(Point& p, char* c){
-  origin.set_xcord() = p.get_xcord();
-  origin.set_ycord() = p.get_ycord();
-  shapeName = new char[s.length() + 1];
+Shape::Shape(Point p, char* c){
+  // origin still wrong, made overloaded = int point but unsused rn
+  origin = Point(p.getx(). p.gety());
+  shapeName = new char[strlen(c) + 1];
   strcpy(shapeName, c);
 }
 
@@ -57,8 +57,8 @@ char* Shape::getName(){
 
 void Shape::display(){
   cout << "\nShape Name: " <<  getName() << "\n";
-  cout << "\nX-coordinate: " <<  getOrigin().get_xcord() << "\n";
-  cout << "\nY-coordinate: " <<  getOrigin().get_ycord() << "\n";
+  cout << "\nX-coordinate: " <<  getOrigin().getx() << "\n";
+  cout << "\nY-coordinate: " <<  getOrigin().gety() << "\n";
 }
 
 double Shape::distance(Shape& other){
@@ -66,12 +66,12 @@ double Shape::distance(Shape& other){
   return dist;
 }
 
-static double Shape::distance (Shape& the_shape, Shape& other){
+double Shape::distance (Shape& the_shape, Shape& other){
   double dist = Point::distance(the_shape.getOrigin(), other.getOrigin());
   return dist;
 }
 
 void Shape::move(double dx, double dy){
-  getOrigin().set_xcord((getOrigin().get_xcord())+dx);
-  getOrigin().set_ycord((getOrigin().get_ycord())+dy);
+  getOrigin().setx((getOrigin().getx())+dx);
+  getOrigin().sety((getOrigin().gety())+dy);
 }

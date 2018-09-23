@@ -1,10 +1,11 @@
 #include "graphicsWorld.h"
 #include <string.h>
 #include <iostream>
+#include "point.h"
 using namespace std;
 
 
-void GraphicsWorld::run(){
+void graphicsWorld::run(){
 #if 1               // Change 0 to 1 to test Point
   Point m (6, 8);
   Point n (6,8);
@@ -67,3 +68,4 @@ void GraphicsWorld::run(){
   sh [3]->display();
 
 #endif             // end of block to test array of pointer and polymorphism
+}

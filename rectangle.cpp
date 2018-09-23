@@ -7,8 +7,8 @@ using namespace std;
 
 void Rectangle::display(){
   cout << "\nShape Name: " <<  Shape::getName() << "\n";
-  cout << "\nX-coordinate: " <<  Shape::getOrigin().get_xcord() << "\n";
-  cout << "\nY-coordinate: " <<  Shape::getOrigin().get_ycord() << "\n";
+  cout << "\nX-coordinate: " <<  Shape::getOrigin().getx() << "\n";
+  cout << "\nY-coordinate: " <<  Shape::getOrigin().gety() << "\n";
   cout << "\nSide a: " <<  Square::get_sideA() << "\n";
   cout << "\nSide b: " <<  side_b << "\n";
   cout << "\nArea: " <<  area() << "\n";

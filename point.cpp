@@ -10,20 +10,31 @@ Point::Point(int x, int y) {
   id++;
 }
 
-int Point::get_xcord() {
+int Point::getx() {
   return xcord;
 }
 
-int Point::get_ycord() {
+int Point::gety() {
   return ycord;
 }
 
-void Point::set_xcord(int x) {
+void Point::setx(int x) {
   xcord = x;
 }
 
-void Point::set_ycord(int y) {
+void Point::sety(int y) {
   ycord = y;
+}
+
+Point& Point::operator =(const Point& p) {
+  if(this==&p)
+    return *this;
+
+  setx(p.xcord);
+  sety(p.ycord);
+
+  return *this;
+
 }
 
 int Point::counter() {
@@ -36,7 +47,7 @@ void Point::display() {
 
 }
 
-static double Point::distance(Point a, Point b) {
+double Point::distance(Point a, Point b) {
   double x_dist = a.xcord - b.xcord;
   if (x_dist < 0) {
     x_dist = 0 - x_dist;
