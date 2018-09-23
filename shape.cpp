@@ -5,10 +5,9 @@
 #include <iostream>
 using namespace std;
 
-Shape::Shape(int x, int y, char* c) {
+Shape::Shape(int x, int y, char* c):origin(x,y) {
   // origin still wrong, made overloaded = int point but unsused rn
 //  origin = new Point(p.getx(). p.gety());
-  origin (x, y);
   shapeName = new char[strlen(c) + 1];
   strcpy(shapeName, c);
 }
