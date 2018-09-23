@@ -4,10 +4,6 @@
 #include <math.h>
 using namespace std;
 
-Point::Point (const Point &source){
-  setx(source.xcord);
-  sety(source.ycord);
-}
 
 Point::Point(int x, int y) {
   xcord = x;

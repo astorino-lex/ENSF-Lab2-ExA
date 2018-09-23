@@ -9,9 +9,6 @@ class Point {
 
   public:
     static int count; //total number of points
-    
-    Point (const Point &source);
-    //copy constructor
 
     Point(int x, int y);
     //PROMISES: creates a point located at the coordinates (x,y) with a
