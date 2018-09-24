@@ -32,7 +32,7 @@ void GraphicsWorld::run(){
   Rectangle b(16 , 7, 8, 9,"RECTANGLE B");
   b.display();
   double d = a.distance(b);
-  cout <<"\nDistance between square a, and b is: " << d << endl;
+  cout <<"\nDistance between rectangle a, and b is: " << d << endl;
   Rectangle rec1 = a;
   rec1.display();
   cout << "\nTesting assignment operator in class Rectangle:" <<endl;
@@ -52,14 +52,14 @@ void GraphicsWorld::run(){
   rec3.display();
   a.set_side_b(300);
   a.set_side_a(400);
-  cout << "\nExpected to display the following values for objec rec2: " << endl;
+  cout << "\nExpected to display the following values for objec rec3: " << endl;
   cout << "Rectangle Name: RECTANGLE A\n" << "X-coordinate: 5\n"  << "Y-coordinate: 7\n"
       << "Side a: 100\n" << "Side b: 200\n" << "Area: 20000\n" << "Perimeter: 600\n" ;
       cout << "\nIf it doesn't there is a problem with your assignment operator.\n" << endl;
       rec3.display();
 #endif              // end of block to test Rectangle
 
-#if 0               // Change 0 to 1 to test using array of pointer and polymorphism
+#if 1              // Change 0 to 1 to test using array of pointer and polymorphism
   cout << "\nTesting array of pointers and polymorphism:" <<endl;
   Shape* sh[4];
   sh[0] = &s;

@@ -7,10 +7,9 @@ using namespace std;
 
 Shape::Shape(int x, int y, string s):origin(x,y) {
   shapeName = new char[s.length() + 1];
-  for (int i = 0; i<= (sizeof(shapeName)+1); i++){
+  for (int i = 0; i < (s.length()); i++){
     shapeName[i] = s.at(i);
   }
-  //strcpy(shapeName, s);
 }
 
 
@@ -58,12 +57,11 @@ char* Shape::getName(){
 
 void Shape::display(){
   cout << "\nShape Name: " <<  getName();
-  cout << "\nX-coordinate: " <<  getOrigin().getx();
-  cout << "\nY-coordinate: " <<  getOrigin().gety();
+  origin.display();
 }
 
 double Shape::distance(Shape& other){
-  double dist = getOrigin().distance(origin);
+  double dist = origin.distance(other.getOrigin());
   return dist;
 }
 
