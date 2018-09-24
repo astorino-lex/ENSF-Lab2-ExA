@@ -2,6 +2,8 @@
 #include <string.h>
 #include <iostream>
 #include "point.h"
+#include "square.h"
+#include "rectangle.h"
 using namespace std;
 
 
@@ -17,17 +19,17 @@ void GraphicsWorld::run(){
         << Point::distance(m, n);
 #endif             // end of block to test Point
 
-#if 0              // Change 0 to 1 to test Square
+#if 1              // Change 0 to 1 to test Square
   cout << "\n\nTesting Functions in class Square:" <<endl;
   Square s(5, 7, 12, "SQUARE - S");
   s.display();
 #endif             // end of block to test Square
 
-#if 0               // Change 0 to 1 to test Rectangle
+#if 1               // Change 0 to 1 to test Rectangle
   cout << "\nTesting Functions in class Rectangle:";
   Rectangle a(5, 7, 12, 15, "RECTANGLE A");
-  a.display();  Rectangle b(16 , 7, 8, 9,
-  "RECTANGLE B");
+  a.display();
+  Rectangle b(16 , 7, 8, 9,"RECTANGLE B");
   b.display();
   double d = a.distance(b);
   cout <<"\nDistance between square a, and b is: " << d << endl;
@@ -35,7 +37,9 @@ void GraphicsWorld::run(){
   rec1.display();
   cout << "\nTesting assignment operator in class Rectangle:" <<endl;
   Rectangle rec2 (3, 4, 11, 7, "RECTANGLE rec2");
-  rec2.display(); rec2 = a; a.set_side_b(200);
+  rec2.display();
+  rec2 = a;
+  a.set_side_b(200);
   a.set_side_a(100);
   cout << "\nExpected to display the following values for objec rec2: " << endl;
   cout << "Rectangle Name: RECTANGLE A\n" << "X-coordinate: 5\n"  << "Y-coordinate: 7\n"

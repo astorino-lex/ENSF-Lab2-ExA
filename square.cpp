@@ -4,17 +4,15 @@
 #include <iostream>
 using namespace std;
 
-Square::Square(int xcord, int ycord, double length, char* name): Shape(xcord, ycord,name){
+Square::Square(int xcord, int ycord, double length, string name): Shape(xcord, ycord, name){
   side_a = length;
 }
 
 void Square::display(){
-  cout << "\nShape Name: " <<  Shape::getName() << "\n";
-  cout << "\nX-coordinate: " <<  Shape::getOrigin().getx() << "\n";
-  cout << "\nY-coordinate: " <<  Shape::getOrigin().gety() << "\n";
-  cout << "\nSide a: " <<  side_a << "\n";
-  cout << "\nArea: " <<  area() << "\n";
-  cout << "\nPerimeter: " <<  perimeter() << "\n";
+  Shape::display();
+  cout << "\nSide a: " <<  side_a;
+  cout << "\nArea: " <<  area();
+  cout << "\nPerimeter: " <<  perimeter()<<"\n";
 }
 
 double Square::area(){

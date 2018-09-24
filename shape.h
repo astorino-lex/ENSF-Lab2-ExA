@@ -13,7 +13,7 @@ protected:
   char * shapeName;
 
 public:
-  Shape(int x, int y, char* c);
+  Shape(int x, int y, string s);
   //PROMISES: a constructor which initializes all the data members.
 
   Shape(const Shape& source); // copy constructor

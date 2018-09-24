@@ -14,7 +14,7 @@ protected:
 
 public:
 
-Square(int xcord, int ycord, double length, char* name);
+Square(int xcord, int ycord, double length, string name);
 //constructor
 
 void display();

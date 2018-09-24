@@ -13,6 +13,9 @@ private:
   double side_b;
 
 public:
+Rectangle(int x, int y, double sidea, double sideb, string s);
+//constructor
+
 void display();
 //PROMISES: to print the information about the rectangle
 
@@ -22,13 +25,14 @@ double area();
 double perimeter();
 //PROMISES: to return the perimeter of the rectangle
 
-double get_sideB();
+double get_side_b();
 //PROMISES: to return the length of one side of the rectangle
 
-void set_sideB(double length);
+void set_side_b(double length);
 //PROMISES: to set a new length of the side of the rectangle
 
-
+void set_side_a(double length);
+//PROMISES: to set a new length for side a of the rectangle
 
 };
 #endif

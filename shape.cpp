@@ -5,9 +5,12 @@
 #include <iostream>
 using namespace std;
 
-Shape::Shape(int x, int y, char* c):origin(x,y) {
-  shapeName = new char[strlen(c) + 1];
-  strcpy(shapeName, c);
+Shape::Shape(int x, int y, string s):origin(x,y) {
+  shapeName = new char[s.length() + 1];
+  for (int i = 0; i<= (sizeof(shapeName)+1); i++){
+    shapeName[i] = s.at(i);
+  }
+  //strcpy(shapeName, s);
 }
 
 
@@ -54,9 +57,9 @@ char* Shape::getName(){
 }
 
 void Shape::display(){
-  cout << "\nShape Name: " <<  getName() << "\n";
-  cout << "\nX-coordinate: " <<  getOrigin().getx() << "\n";
-  cout << "\nY-coordinate: " <<  getOrigin().gety() << "\n";
+  cout << "\nShape Name: " <<  getName();
+  cout << "\nX-coordinate: " <<  getOrigin().getx();
+  cout << "\nY-coordinate: " <<  getOrigin().gety();
 }
 
 double Shape::distance(Shape& other){
