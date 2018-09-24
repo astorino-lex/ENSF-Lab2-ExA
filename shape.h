@@ -30,7 +30,7 @@ public:
   char* getName();
   // PROMISES: to return the char pointer to the name of the shape.
 
-  void display();
+  virtual void display();
   //PROMISES: to print the shape information on the screen.
 
   double distance(Shape& other);

@@ -17,7 +17,7 @@ class Point {
     int getx();
     //PROMISES: returns the point's x-coordinate
 
-     int gety();
+    int gety();
     //PROMISES: returns the point's y-coordinate
 
     void setx(int x);
