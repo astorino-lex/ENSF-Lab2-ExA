@@ -5,6 +5,8 @@
 using namespace std;
 
 
+int Point::count = 1000;
+
 Point::Point(int x, int y) {
   xcord = x;
   ycord = y;

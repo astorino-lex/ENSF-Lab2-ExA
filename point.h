@@ -54,6 +54,4 @@ class Point {
     int id; //id number for each object
 };
 
-int Point::count = 1000;
-
 #endif
